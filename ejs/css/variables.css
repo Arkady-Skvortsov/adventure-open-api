@@ -1,0 +1,16 @@
+:root {
+  --Stint: "Stint Ultra Condensed", cursive;
+  --w: white;
+  --b: black;
+  --font: 35px;
+  --card-font: 15px;
+}
+
+.get-black {
+  background: var(--b);
+}
+
+.get-white {
+  background: var(--b);
+  color: var(--w);
+}

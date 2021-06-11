@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  web:
+    build: ./
+    container_name: node-container
+    image: 389798/node-image
+    volumes:
+      - C:\Users\Игорь\Documents\MongoDB\ejs:/app/ejs
+    depends_on:
+      - db
+    ports:
+      - 4500:8080
+
+  db:
+    image: postgres
+    container_name: pg-container-real
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=rambler557
+      - POSTGRES_DB=adventure
+    ports:
+      - 8080:5432
+    volumes:
+      - db-postgres:/var/lib/postgresql/data
+
+volumes:
+  db-postgres:

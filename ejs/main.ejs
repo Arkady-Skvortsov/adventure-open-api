@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="main-adventure-container">
+        <%- include('./partials/navbar.ejs') %>
+      </section>
+      <div class="some-tutorial body-container">
+        <div class="fetch-api-example">
+          <div class="fetch-text">
+            <span class="fetch-text__text"
+              >Get it to work with Adventure Time API</span
+            >
+            <span class="fetch-text__text">http://adventure-time-f100/api</span>
+          </div>
+
+          <div class="api-list-container">
+            <div class="characters-fetch">
+              <span class="characters-fetch__text"
+                >GET all (name: characters, weapons, lands, magic_items) -</span
+              >
+
+              <span class="characters-fetch__url"
+                >http://adventure-time-f100/api/${name}</span
+              >
+            </div>
+            <div class="characters-fetch">
+              <span class="characters-fetch__text"
+                >GET random (name: characters, weapons, lands, magic_items)
+                -</span
+              >
+
+              <span class="characters-fetch__url"
+                >http://adventure-time-f100/api/${name}/random</span
+              >
+            </div>
+            <div class="characters-fetch">
+              <span class="characters-fetch__text"
+                >GET by id (name: characters, weapons, lands, magic_items)
+                -</span
+              >
+
+              <span class="characters-fetch__url"
+                >http://adventure-time-f100/api/${name}/:id</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%- include('./partials/footer.ejs') %>
+    </div>
+  </body>
+</html>
