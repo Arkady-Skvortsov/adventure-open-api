@@ -10,7 +10,7 @@
 
 **lands: https://adventure-time/api/lands**
 
-**magic items: https://adventure-time/api/magic_items**
+**magic items: https://adventure-time/api/magic_items/**
 
 **2. Get random from table**
 

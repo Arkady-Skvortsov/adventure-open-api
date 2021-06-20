@@ -10,13 +10,9 @@ const router = Router();
 //PAGES
 
 router.get("/", (req, res) => {
-  res.render("main", {
+  res.render("main.ejs", {
     title: "Adventure Time API",
   });
-
-  const v = characters.get_all();
-
-  console.log(v);
 });
 
 router.get("/characters", (req, res) => {
@@ -33,7 +29,7 @@ router.get("/lands", (req, res) => {
   res.render("lands.ejs", { title: "Lands" });
 });
 
-router.get("/artifacts", (req, res) => {
+router.get("/magic_items", (req, res) => {
   res.render("artifacts.ejs", { title: "Magic Items" });
 });
 

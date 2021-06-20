@@ -3,7 +3,6 @@ const path = require("path");
 const fs = require("fs");
 const process = require("process");
 const pages = require("./routes/pages.js");
-
 const app = express();
 const port = process.env.PORT || 4500;
 

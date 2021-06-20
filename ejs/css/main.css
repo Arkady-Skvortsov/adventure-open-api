@@ -128,22 +128,26 @@ body {
 }
 
 .front-adventure-side {
-  background: none;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .adventure-image {
-  max-height: 350px;
-  min-width: 250px;
+  height: 350px;
+  max-width: 250px;
 }
 
 .adventure-image__image {
-  min-height: 350px;
+  height: 350px;
   max-width: 250px;
 }
 
 .adventure-text-block {
   height: 50px;
   display: flex;
+  bottom: 0;
   justify-content: center;
   align-items: center;
   width: inherit;
@@ -158,15 +162,16 @@ body {
 .back-adventure-side {
   background: var(--b);
   cursor: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: rotateY(180deg);
 }
 
 .adventure-json-block {
   max-width: 250px;
-  height: inherit;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+  max-height: inherit;
+  word-wrap: break-word;
 }
 
 .adventure-json-block__text {
