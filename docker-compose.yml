@@ -2,32 +2,30 @@ version: "3.9"
 
 services:
   web:
-    build: ./
-    container_name: node-container
-    image: 389798/node-image
+    container_name: my_web
+    image: 389798/node-container
+    build: .
+    depends_on:
+      - db
     volumes:
-      - C:\Users\Игорь\Documents\MongoDB\ejs:/app/ejs
-    links:
-      - "db:database"
+      - C:\Users\Игорь\Documents\adventure-open-api\ejs:/app/ejs
     ports:
-      - 4500:8080
-    networks: app-network
+      - 4000:4000
 
   db:
     image: postgres
-    container_name: pg-container-real
+    container_name: my_db
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=rambler557
       - POSTGRES_DB=adventure
     ports:
-      - 6432:5432
+      - 8080:5432
     volumes:
       - db-postgres:/var/lib/postgresql/data
-    networks: app-network
 
 networks:
-  app-network:
+  default:
 
 volumes:
   db-postgres:
